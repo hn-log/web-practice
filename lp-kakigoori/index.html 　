@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="夏限定のかき氷を紹介しています。熱中症対策としてもぴったりです"
+    />
+
+    <title>この夏はこれ</title>
+  </head>
+  <body>
+    <header>
+      <img src="#" alt="この店のロゴ" />
+      <nav>
+        <p>住所：xxx xxxx xxx店</p>
+        <p>電話番号：000 000 0000 00</p>
+        <ul>
+          <li><a href="#">snsアイコン</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>この夏はこれ</h1>
+      <img src="#" alt="もも、りんご味のかき氷が並んで置いてある" />
+      <h2>夏限定の他にないフレーバーも様々</h2>
+
+      <section>
+        <h3>メニュー一覧</h3>
+        <img
+          src="#"
+          alt="限定の味のもも、りんご、通常味のいちご、キウイ、マンゴー"
+        />
+      </section>
+
+      <section>
+        <h3>フレーバーいろいろ</h3>
+        <figure>
+          <img src="#" alt="左からいちご、キウイ、マンゴー、のフレーバー" />
+          <figcaption>地域によっては異なることがあります</figcaption>
+        </figure>
+        <p>
+          王道から意外なものまでフレーバーを揃えています
+        </p>
+      </section>
+
+      <section>
+        <h3>拘った氷</h3>
+        <figure>
+          <img src="#" alt="職人がかき氷器械を精密に扱って作成している" />
+          <figcaption>世界の職人が集まって開発したかき氷器</figcaption>
+        </figure>
+        <p>他のとは違う新しいカキ氷</p>
+      </section>
+
+      <section>
+        <h3>トッピングもさまざま</h3>
+        <figure>
+          <img
+            src="#"
+            alt="あんみつやアイスクリームにタピオカなどのトッピングが飾られている"
+          />
+          <figcaption>一部売り切れの可能性があります</figcaption>
+        </figure>
+        <p>懐かしみのある味や今流行りのあの味まで取り揃えています</p>
+      </section>
+    </main>
+    <footer>
+      <address>
+        <p>住所：xxx xxxx xxx店</p>
+        <p>電話番号：000 000 0000 00</p>
+      </address>
+
+      <ul>
+        <li>
+          <a href="#">
+            <img src="#" alt="instagram" />
+            snsアイコン
+          </a>
+        </li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
