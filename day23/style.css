@@ -1,0 +1,107 @@
+html body {
+  font-size: 14px;
+}
+
+.h1-div {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-text {
+  box-sizing: border-box;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(137, 167, 188);
+  width: 30%;
+
+  border-radius: 30px;
+  color: rgb(228, 228, 228);
+}
+
+.nav-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  border-style: none;
+  background-color: rgb(137, 167, 188);
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.nav-a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 1rem;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  color: rgb(68, 102, 157);
+  background-color: rgb(255, 255, 255);
+  margin: 30px auto;
+  width: 50%;
+}
+
+.img-item {
+  display: flex;
+  justify-content: center;
+}
+.photo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-box {
+  box-sizing: border-box;
+  background-color: rgb(137, 167, 188);
+  width: 80%;
+
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.a-box {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.footer-box ul {
+  padding-left: 0; /* 左のパディングを消す */
+  margin: 0;
+}
+.footer-box ul li {
+  list-style: none;
+}
+.footer-box p {
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .logo-text {
+    width: 15%;
+  }
+
+  .nav-box {
+    width: 40%;
+  }
+
+  .footer-box {
+    width: 20%;
+  }
+  .photo {
+    width: 80%;
+  }
+}
