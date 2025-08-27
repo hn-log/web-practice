@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
+    <meta name="description" content="簡易電卓" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>学習</title>
+    <title>簡易電卓</title>
+    <style></style>
   </head>
   <body>
-    <header>
-      <h1>学習記録</h1>
-       <nav>
-        <ul>
-          <li><a href="#">トップ</a></li>
-          <li><a href="#">一覧</a></li>
-          <li><a href="#">お問い合わせ</a></li>
-        </ul>
-    </header>
-    <section>
-      <header>
-        <h2>セクションタグとヘッダーの違い</h2>
-      </header>
+    <div class="dentaku">
+      <input id="nyuryoku" readonly />
+      <div class="buttonS">
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>0</button>
+        <button>.</button>
+        <button>=</button>
+        <button>+</button>
+        <button>C</button>
+      </div>
+    </div>
 
-      <h2>sectionの特徴</h2>
-      <ul>
-        <li>意味のあるまとまり</li>
-        <li>h1〜h6の見出しと一緒に使うことが多い</li>
-      </ul>
+    <script>
+      const nyuryokuEl = document.querySelector("#nyuryoku");
+      const buttonSEl = document.querySelectorAll("button");
 
-      <h2>header</h2>
-      <ul>
-        <li>セクションやページの先頭部分</li>
-        <li>タイトル、ナビゲーション、ロゴなどが含まれる</li>
-      </ul>
-    </section>
-    <section>
-      <h2>お問い合わせフォーム</h2>
-      <p>名前を書いて送信ボタンを押してください</p>
-      <form action="#" method="post">
-        <label for="name">名前</label>
-        <input type="text" id="name" name="username" />
-        <input type="submit" value="送信" />
-      </form>
-    </section>
+      let hyouzi = "";
 
+      buttonSEl.forEach((botn) => {
+        botn.addEventListener("click", () => {
+          const value = botn.textContent;
 
-    <section>
-      <h2>好きなフルーツを選ぶ</h2>
-      <form action="#" method="post">
-        <label for="fruit">フルーツ</label>
-        <select name="fruit" id="fruit">
-          <option value="ぶどう">ぶどう</option>
-          <option value="りんご">りんご</option>
-          <option value="みかん">みかん</option>
-        </select>
-        <button type="submit">選ぶ</button>
-      </form>
-    </section>
-    
+          if (value === "=") {
+            try {
+              hyouzi = eval(hyouzi).toString();
+            } catch {
+              hyouzi = "エラー";
+            }
+          } else if (value === "C") {
+            hyouzi = "";
+          } else if (value === ".") {
+            const tokens = hyouzi.split(/[\+\-\*\/]/);
+            const currentNumber = tokens[tokens.length - 1];
+            if (!currentNumber.includes(".")) {
+              hyouzi += value;
+            }
+          } else {
+            hyouzi += value;
+          }
+          nyuryokuEl.value = hyouzi;
+        });
+      });
+    </script>
   </body>
 </html>
