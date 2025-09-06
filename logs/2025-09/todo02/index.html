@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>todo</h1>
+    <input id="taskInput" type="text" />
+    <button id="addBtn">追加</button>
+    <ul id="taskList"></ul>
+
+    <script>
+      const inputEl = document.querySelector("#taskInput");
+      const addBtnEl = document.querySelector("#addBtn");
+      const taskListEl = document.querySelector("#taskList");
+
+      const newTask = (text) => {
+        const li = document.createElement("li");
+
+        const span = document.createElement("span");
+        span.textContent = text;
+        li.appendChild(span);
+
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "×";
+        delBtn.addEventListener("click", () => li.remove());
+        li.appendChild(delBtn);
+        taskListEl.appendChild(li);
+      };
+
+      const addTask = () => {
+        const text = inputEl.value.trim();
+        if (!text) return;
+        newTask(text);
+        inputEl.value = "";
+        inputEl.focus();
+      };
+
+      addBtnEl.addEventListener("click", addTask);
+      inputEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") addTask();
+      });
+    </script>
+  </body>
+</html>
